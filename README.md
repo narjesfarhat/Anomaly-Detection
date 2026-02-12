@@ -1,27 +1,49 @@
-# Anomaly-Detection
+# Anomaly Detection
 
-This project explores three unsupervised models — Autoencoder, Isolation Forest, and One‑Class SVM — to detect rare fraudulent transactions in a highly imbalanced credit‑card dataset. The notebook includes preprocessing, model training, evaluation, and insights into the flagged anomalies.
+A comprehensive analysis of unsupervised machine learning models for detecting fraudulent transactions in highly imbalanced credit card datasets.
 
-Models Used
-Autoencoder
+## Overview
 
-Isolation Forest
+This project explores three unsupervised anomaly detection models to identify rare fraudulent transactions:
+- **Autoencoder** - Neural network-based approach
+- **Isolation Forest** - Tree-based ensemble method  
+- **One-Class SVM** - Support Vector Machine for anomaly detection
 
-One‑Class SVM
+The analysis includes preprocessing, model training, evaluation, and detailed insights into detected anomalies.
 
-Key Results
-Isolation Forest achieved the best fraud‑detection performance.
+## Key Results
 
-Autoencoder modeled normal transactions very well but missed more fraud.
+| Model | Performance |
+|-------|-------------|
+| **Isolation Forest** | Best fraud-detection performance |
+| **Autoencoder** | Excellent normal transaction modeling, higher false negatives |
+| **One-Class SVM** | Struggled with dataset imbalance |
 
-One‑Class SVM struggled with the dataset’s imbalance.
+## Key Insights
 
-Insights
-Fraud cases are extremely rare, so precision, recall, and F1‑score are more important than accuracy.
+- **Metric Selection**: For imbalanced datasets, precision, recall, and F1-score are more informative than accuracy
+- **Feature Analysis**: Flagged anomalies showed significant deviations in PCA-based features (V1–V28)
+- **Best Performer**: Isolation Forest captured the clearest anomaly patterns and delivered superior results
 
-Flagged anomalies showed strong deviations in PCA‑based features (V1–V28).
+## Project Structure
 
-Isolation Forest captured the clearest anomaly patterns.
+- `Fraud_Detection.ipynb` - Complete analysis with model comparison, training, and evaluation
 
-Contents
-Fraud_Detection.ipynb — full analysis and model comparison.
+## Technologies Used
+
+- Python
+- Scikit-learn
+- TensorFlow/Keras (for Autoencoder)
+- Pandas & NumPy
+- PCA for dimensionality reduction
+
+## Getting Started
+
+1. Clone the repository
+2. Install required dependencies
+3. Open `Fraud_Detection.ipynb` in Jupyter Notebook
+4. Run cells sequentially for full analysis
+
+## License
+
+This project is open source and available for educational purposes.
