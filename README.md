@@ -1,25 +1,27 @@
 # Anomaly-Detection
-This project applies three unsupervised anomaly‑detection techniques — Autoencoder, Isolation Forest, and One‑Class SVM — to identify rare fraudulent transactions in a highly imbalanced credit‑card dataset. The notebook includes data preprocessing, model training, evaluation using precision, recall, and F1‑score, and insights into the types of anomalies flagged by each model.
 
-Key Features
-Handles a very imbalanced dataset where fraud cases represent less than 0.2% of all transactions.
+This project explores three unsupervised models — Autoencoder, Isolation Forest, and One‑Class SVM — to detect rare fraudulent transactions in a highly imbalanced credit‑card dataset. The notebook includes preprocessing, model training, evaluation, and insights into the flagged anomalies.
 
-Compares three anomaly‑detection models on their ability to detect rare fraud cases.
+Models Used
+Autoencoder
 
-Evaluates performance using precision, recall, F1‑score, and confusion matrices.
+Isolation Forest
 
-Provides insights into which transactions were flagged and patterns in detected anomalies.
+One‑Class SVM
 
-Main Findings
-Isolation Forest achieved the strongest fraud‑detection performance.
+Key Results
+Isolation Forest achieved the best fraud‑detection performance.
 
-Autoencoder modeled normal transactions extremely well but missed more fraud cases.
+Autoencoder modeled normal transactions very well but missed more fraud.
 
-One‑Class SVM struggled due to the dataset’s size and imbalance.
+One‑Class SVM struggled with the dataset’s imbalance.
 
-Flagged anomalies showed unusual deviations in PCA‑based features (V1–V28).
+Insights
+Fraud cases are extremely rare, so precision, recall, and F1‑score are more important than accuracy.
+
+Flagged anomalies showed strong deviations in PCA‑based features (V1–V28).
+
+Isolation Forest captured the clearest anomaly patterns.
 
 Contents
-Fraud_Detection.ipynb – Full analysis and model comparison
-
-README file (this document)
+Fraud_Detection.ipynb — full analysis and model comparison.
